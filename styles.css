@@ -1,0 +1,128 @@
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #5a3a4e;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h2 {
+    color: #ff6f61;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff6f61;
+    }
+    50% {
+        color: #ff9a9e;
+    }
+    100% {
+        color: #fad0c4;
+    }
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    animation: textFade 2s ease-in-out;
+}
+
+@keyframes textFade {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.button:hover {
+    background-color: #ff9a9e;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
